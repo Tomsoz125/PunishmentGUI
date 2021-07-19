@@ -10,7 +10,7 @@ PunishmentGUI is a free open source punishment system that allows you to add pun
 
 >> Customisability
 	All of the GUIs are 100% customisable through config files. You can adjust everything to make it fit the theme of your server!
-	![alt text](https://proxy.spigotmc.org/69f60634cc126120fbfd68d18182905b845d2a34?url=https%3A%2F%2Fimgur.com%2FfRf3P0q.png)
+	![alt text](https://imgur.com/fRf3P0q.png)
 	
 >> Config files
 	Here is all of the config files
