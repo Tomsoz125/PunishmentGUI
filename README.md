@@ -8,6 +8,6 @@ Adding a punishment
 		Select if it's silent or not
 		Confirm punishment
 
-Customisability
+Customisability:
 	All of the GUIs are 100% customisable through config files. You can adjust everything to make it fit the theme of your server!
 	![alt text](https://imgur.com/fRf3P0q.png)
