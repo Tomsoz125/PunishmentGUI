@@ -34,13 +34,13 @@ public class Database {
         }
     }
 
-    public static void addPunishment(String status, int time, String target, String executor, String revoker, String type, String duration, String reason, int revokeTime, int silent) {
+    public static void addPunishment(String status, long time, String target, String executor, String revoker, String type, String duration, String reason, int revokeTime, int silent) {
         Connection connection = getConnection();
         PreparedStatement statement;
         try {
             statement = connection.prepareStatement("INSERT INTO punishmentgui_logs(status, time, target, executor, revoker, punishment_type, duration, reason, revoke_time, silent) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             statement.setString(1, status);
-            statement.setInt(2, time);
+            statement.setLong(2, time);
             statement.setString(3, target);
             statement.setString(4, executor);
             statement.setString(5, revoker);

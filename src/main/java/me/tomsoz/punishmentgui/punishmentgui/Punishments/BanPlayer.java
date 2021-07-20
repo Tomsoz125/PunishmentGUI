@@ -1,5 +1,8 @@
 package me.tomsoz.punishmentgui.punishmentgui.Punishments;
 
+import me.tomsoz.punishmentgui.punishmentgui.Enums.LogTypes;
+import me.tomsoz.punishmentgui.punishmentgui.Enums.Types;
+import me.tomsoz.punishmentgui.punishmentgui.Logger.Log;
 import me.tomsoz.punishmentgui.punishmentgui.Misc.Utils;
 import me.tomsoz.punishmentgui.punishmentgui.PunishmentGUI;
 import org.bukkit.Bukkit;
@@ -41,7 +44,8 @@ public class BanPlayer {
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
                 }
             }
-            //new Log(Types.BAN, executor, target, reason, null);
+            new Log(LogTypes.ADD, Types.BAN, executor, target, reason, time);
+            executor.sendMessage(Utils.chat("&aYou've sucessfully banned "+target.getName()));
         } else {
             List<String> commands;
             if (silent) {
@@ -59,7 +63,7 @@ public class BanPlayer {
                 }
             }
             executor.sendMessage(Utils.chat("&aYou've sucessfully banned "+target.getName()));
-            //new Log(Types.TEMPBAN, executor, target, reason, time);
+            new Log(LogTypes.ADD, Types.TEMPBAN, executor, target, reason, time);
         }
     }
 }

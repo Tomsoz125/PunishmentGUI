@@ -1,5 +1,8 @@
 package me.tomsoz.punishmentgui.punishmentgui.Punishments;
 
+import me.tomsoz.punishmentgui.punishmentgui.Enums.LogTypes;
+import me.tomsoz.punishmentgui.punishmentgui.Enums.Types;
+import me.tomsoz.punishmentgui.punishmentgui.Logger.Log;
 import me.tomsoz.punishmentgui.punishmentgui.Misc.Utils;
 import me.tomsoz.punishmentgui.punishmentgui.PunishmentGUI;
 import org.bukkit.Bukkit;
@@ -37,7 +40,7 @@ public class UnmutePlayer {
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
             }
         }
-        //new Log(Types.UNMUTE, executor, target, reason, null);
+        new Log(LogTypes.ADD, Types.UNMUTE, executor, target, reason, null);
         executor.sendMessage(Utils.chat("&aYou've sucessfully unmuted "+target.getName()));
     }
 }
