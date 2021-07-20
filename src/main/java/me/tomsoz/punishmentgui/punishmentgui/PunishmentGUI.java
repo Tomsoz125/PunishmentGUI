@@ -3,6 +3,7 @@ package me.tomsoz.punishmentgui.punishmentgui;
 import me.tomsoz.punishmentgui.punishmentgui.Commands.PunishGUICommand;
 import me.tomsoz.punishmentgui.punishmentgui.Commands.PunishmentGUICommand;
 import me.tomsoz.punishmentgui.punishmentgui.Configs.ConfigManager;
+import me.tomsoz.punishmentgui.punishmentgui.Database.Database;
 import me.tomsoz.punishmentgui.punishmentgui.Events.Chat;
 import me.tomsoz.punishmentgui.punishmentgui.Events.InventoryClick;
 import me.tomsoz.punishmentgui.punishmentgui.Events.PlayerInteract;
@@ -19,6 +20,7 @@ import java.util.logging.Level;
 public final class PunishmentGUI extends JavaPlugin {
     int spigotId = 94452;
     double configVer = 1.1;
+    private static String connectionURL;
     ConfigManager manager = new ConfigManager(this);
     PluginDescriptionFile desc = this.getDescription();
     InventoryClick click = new InventoryClick(this);
@@ -30,6 +32,8 @@ public final class PunishmentGUI extends JavaPlugin {
         setupConfiguration();
         checkUpdate();
         updateConfig();
+        Database.initialiseDatabase();
+        connectionURL = getDataFolder().getAbsolutePath()+"/data/PunishmentGUI";
         //new Log(null, null, null, null, null).setup();
         sender.sendMessage(Utils.chat("&c"+desc.getName()+" &cv&4"+desc.getVersion()+" &cby &4"+desc.getAuthors().get(0)+" &chas successfully enabled."));
     }
@@ -76,5 +80,9 @@ public final class PunishmentGUI extends JavaPlugin {
     }
     public ConfigManager getConfigManager() {
         return manager;
+    }
+
+    public static String getConnectionURL(){
+        return connectionURL;
     }
 }
