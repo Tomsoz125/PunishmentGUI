@@ -3,6 +3,7 @@ package me.tomsoz.punishmentgui.punishmentgui;
 import me.tomsoz.punishmentgui.punishmentgui.Commands.PunishGUICommand;
 import me.tomsoz.punishmentgui.punishmentgui.Commands.PunishmentGUICommand;
 import me.tomsoz.punishmentgui.punishmentgui.Configs.ConfigManager;
+import me.tomsoz.punishmentgui.punishmentgui.Database.Database;
 import me.tomsoz.punishmentgui.punishmentgui.Events.Chat;
 import me.tomsoz.punishmentgui.punishmentgui.Events.InventoryClick;
 import me.tomsoz.punishmentgui.punishmentgui.Events.PlayerInteract;
@@ -17,6 +18,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.logging.Level;
 
 public final class PunishmentGUI extends JavaPlugin {
+    private static String dbConnectionURL;
     int spigotId = 94452;
     double configVer = 1.1;
     ConfigManager manager = new ConfigManager(this);
@@ -30,6 +32,8 @@ public final class PunishmentGUI extends JavaPlugin {
         setupConfiguration();
         checkUpdate();
         updateConfig();
+        dbConnectionURL = getDataFolder().getAbsolutePath()+"/data/PunishmentGUI";
+        Database.initialiseDatabase();
         //new Log(null, null, null, null, null).setup();
         sender.sendMessage(Utils.chat("&c"+desc.getName()+" &cv&4"+desc.getVersion()+" &cby &4"+desc.getAuthors().get(0)+" &chas successfully enabled."));
     }
@@ -76,5 +80,9 @@ public final class PunishmentGUI extends JavaPlugin {
     }
     public ConfigManager getConfigManager() {
         return manager;
+    }
+
+    public static String getDbConnectionURL() {
+        return dbConnectionURL;
     }
 }
