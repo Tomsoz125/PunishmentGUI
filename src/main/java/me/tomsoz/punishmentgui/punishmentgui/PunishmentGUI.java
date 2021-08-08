@@ -26,6 +26,7 @@ public final class PunishmentGUI extends JavaPlugin {
     InventoryClick click = new InventoryClick(this);
     @Override
     public void onEnable() {
+        connectionURL = getDataFolder().getAbsolutePath()+"/data/PunishmentGUI";
         ConsoleCommandSender sender = Bukkit.getConsoleSender();
         registerCommands();
         registerEvents();
@@ -33,7 +34,6 @@ public final class PunishmentGUI extends JavaPlugin {
         checkUpdate();
         updateConfig();
         Database.initialiseDatabase();
-        connectionURL = getDataFolder().getAbsolutePath()+"/data/PunishmentGUI";
         //new Log(null, null, null, null, null).setup();
         sender.sendMessage(Utils.chat("&c"+desc.getName()+" &cv&4"+desc.getVersion()+" &cby &4"+desc.getAuthors().get(0)+" &chas successfully enabled."));
     }
