@@ -1,5 +1,8 @@
 package me.tomsoz.punishmentgui.punishmentgui.Punishments;
 
+import me.tomsoz.punishmentgui.punishmentgui.Database.Database;
+import me.tomsoz.punishmentgui.punishmentgui.Enums.Types;
+import me.tomsoz.punishmentgui.punishmentgui.Logger.Log;
 import me.tomsoz.punishmentgui.punishmentgui.Misc.Utils;
 import me.tomsoz.punishmentgui.punishmentgui.PunishmentGUI;
 import org.bukkit.Bukkit;
@@ -23,6 +26,10 @@ public class UnmutePlayer {
         unmutePlayer();
     }
     private void unmutePlayer() {
+        if (!Database.isPlayerMuted(target)) {
+            executor.sendMessage(Utils.chat("&c"+target.getName()+" &cis not muted!"));
+            return;
+        }
         List<String> commands;
         if (silent) {
             commands = plugin.getConfigManager().getConfig().getStringList("commands.silent.unmute");
@@ -37,7 +44,7 @@ public class UnmutePlayer {
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
             }
         }
-        //new Log(Types.UNMUTE, executor, target, reason, null);
+        new Log(Types.MUTE, Types.UNMUTE, executor, target, reason, null, silent);
         executor.sendMessage(Utils.chat("&aYou've sucessfully unmuted "+target.getName()));
     }
 }

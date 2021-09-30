@@ -1,5 +1,8 @@
 package me.tomsoz.punishmentgui.punishmentgui.Punishments;
 
+import me.tomsoz.punishmentgui.punishmentgui.Database.Database;
+import me.tomsoz.punishmentgui.punishmentgui.Enums.Types;
+import me.tomsoz.punishmentgui.punishmentgui.Logger.Log;
 import me.tomsoz.punishmentgui.punishmentgui.Misc.Utils;
 import me.tomsoz.punishmentgui.punishmentgui.PunishmentGUI;
 import org.bukkit.Bukkit;
@@ -23,6 +26,10 @@ public class UnwarnPlayer {
         unwarnPlayer();
     }
     private void unwarnPlayer() {
+        if (!Database.isPlayerWarned(target)) {
+            executor.sendMessage(Utils.chat("&c"+target.getName()+" &cis not warned!"));
+            return;
+        }
         List<String> commands;
         if (silent) {
             commands = plugin.getConfigManager().getConfig().getStringList("commands.silent.unwarn");
@@ -37,7 +44,7 @@ public class UnwarnPlayer {
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
             }
         }
-        //new Log(Types.UNWARN, executor, target, reason, null);
+        new Log(Types.WARN, Types.UNWARN, executor, target, reason, null, silent);
         executor.sendMessage(Utils.chat("&aYou've sucessfully unwarned "+target.getName()));
     }
 }

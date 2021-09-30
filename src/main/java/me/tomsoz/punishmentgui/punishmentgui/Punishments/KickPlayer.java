@@ -1,5 +1,7 @@
 package me.tomsoz.punishmentgui.punishmentgui.Punishments;
 
+import me.tomsoz.punishmentgui.punishmentgui.Enums.Types;
+import me.tomsoz.punishmentgui.punishmentgui.Logger.Log;
 import me.tomsoz.punishmentgui.punishmentgui.Misc.Utils;
 import me.tomsoz.punishmentgui.punishmentgui.PunishmentGUI;
 import org.bukkit.Bukkit;
@@ -38,6 +40,6 @@ public class KickPlayer {
             }
         }
         executor.sendMessage(Utils.chat("&aYou've sucessfully kicked "+target.getName()));
-        //new Log(Types.KICK, executor, target, reason, null);
+        new Log(Types.KICK, Types.KICK, executor, target, reason, null, silent);
     }
 }

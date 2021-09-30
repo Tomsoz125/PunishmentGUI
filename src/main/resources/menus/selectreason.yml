@@ -101,7 +101,7 @@ items:
     # This is the slot that the item goes in the GUI
     slot: 23
     # This is what the item stands for, use CUSTOM to set a custom reason or just type your reason in here
-    time: 'CUSTOM'
+    reason: 'CUSTOM'
     # This is the name of the item
     name: "&aCustom reason"
     # This is the lore of the item

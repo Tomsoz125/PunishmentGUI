@@ -69,7 +69,7 @@ public class ConfirmPunishment {
                             .replaceAll("%punishment%", type.toString())
                             .replaceAll("%target%", target.getName()))
                             .replaceAll("%executor%", executor.getName())
-                            .replaceAll("%time%", time)
+                            .replaceAll("%time%", time!=null ? time : "N/A")
                             .replaceAll("%publicity%", publicicy)
                             .replaceAll("%reason%", reason));
                 List<String> permcfglore = cfg.getStringList("items."+key+".permission_lore");

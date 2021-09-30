@@ -50,6 +50,13 @@ public class InventoryClick implements Listener {
                     if (punishmentCfg.getInt(path+"slot")-1 == e.getSlot()) {
                         if (punishmentCfg.getString(path+"type").equals("PLACEHOLDER"))return;
                         getType.put(p, Types.valueOf(punishmentCfg.getString(path+"type")));
+                        if (Types.valueOf(punishmentCfg.getString(path+"type")).equals(Types.UNBAN)||
+                                Types.valueOf(punishmentCfg.getString(path+"type")).equals(Types.UNMUTE)||
+                                Types.valueOf(punishmentCfg.getString(path+"type")).equals(Types.UNWARN)) {
+                            getTime.put(p, null);
+                            p.openInventory(new SelectReason(getTarget.get(p), p, plugin).getInventory());
+                            return;
+                        }
                         Inventory inv = new SelectTime(getTarget.get(p), p, plugin).getInventory();
                         p.openInventory(inv);
                     }

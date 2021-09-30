@@ -1,5 +1,7 @@
 package me.tomsoz.punishmentgui.punishmentgui.Punishments;
 
+import me.tomsoz.punishmentgui.punishmentgui.Enums.Types;
+import me.tomsoz.punishmentgui.punishmentgui.Logger.Log;
 import me.tomsoz.punishmentgui.punishmentgui.Misc.Utils;
 import me.tomsoz.punishmentgui.punishmentgui.PunishmentGUI;
 import org.bukkit.Bukkit;
@@ -41,7 +43,7 @@ public class WarnPlayer {
                 command.replaceAll("%reason%", reason);
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
             }
-            //new Log(Types.WARN, executor, target, reason, null);
+            new Log(Types.WARN, Types.WARN, executor, target, reason, null, silent);
         } else {
             List<String> commands;
             if (silent) {
@@ -58,7 +60,7 @@ public class WarnPlayer {
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
                 }
             }
-            //new Log(Types.TEMPWARN, executor, target, reason, time);
+            new Log(Types.TEMPWARN, Types.TEMPWARN, executor, target, reason, null, silent);
             executor.sendMessage(Utils.chat("&aYou've sucessfully warned "+target.getName()));
         }
     }

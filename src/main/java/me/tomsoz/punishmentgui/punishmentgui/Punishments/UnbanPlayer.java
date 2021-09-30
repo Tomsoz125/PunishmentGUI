@@ -1,5 +1,8 @@
 package me.tomsoz.punishmentgui.punishmentgui.Punishments;
 
+import me.tomsoz.punishmentgui.punishmentgui.Database.Database;
+import me.tomsoz.punishmentgui.punishmentgui.Enums.Types;
+import me.tomsoz.punishmentgui.punishmentgui.Logger.Log;
 import me.tomsoz.punishmentgui.punishmentgui.Misc.Utils;
 import me.tomsoz.punishmentgui.punishmentgui.PunishmentGUI;
 import org.bukkit.Bukkit;
@@ -23,6 +26,10 @@ public class UnbanPlayer {
         unbanPlayer();
     }
     private void unbanPlayer() {
+        if (!Database.isPlayerBanned(target)) {
+            executor.sendMessage(Utils.chat("&c"+target.getName()+" &cis not banned!"));
+            return;
+        }
         List<String> commands;
         if (silent) {
             commands = plugin.getConfigManager().getConfig().getStringList("commands.silent.unban");
@@ -38,6 +45,6 @@ public class UnbanPlayer {
             }
         }
         executor.sendMessage(Utils.chat("&aYou've sucessfully unbanned "+target.getName()));
-        //new Log(Types.UNBAN, executor, target, reason, null);
+        new Log(Types.BAN, Types.UNBAN, executor, target, reason, null, silent);
     }
 }
