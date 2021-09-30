@@ -1,0 +1,81 @@
+#
+# MAIN CONFIGURATION FILE FOR PUNISHMENTGUI BY TOMSOZ
+# This is where you can configure and customise how PunishmentGUI works.
+# If you have any questions please check my github: https://github.com/Tomsoz125/PunishmentGUI
+# Thanks for using PunishmentGUI
+#
+config-version: 1.1
+
+#
+# Here is the commands that get executed for certain actions.
+# Set these to 'none' to disable them.
+#
+commands:
+  # The commands that get executed when a punishment is silent
+  silent:
+    # The commands that get executed when a player is banned
+    # Use: %target% to get the target's name
+    # Use: %executor% to get the executor's name
+    # Use: %reason% to get the ban reason
+    # If applicable use: %time% to get the time
+    ban:
+      - "none"
+    # The commands that get executed when a player is unbanned
+    unban:
+      - "none"
+    # The commands that get executed when a player is tempbanned
+    tempban:
+      - "none"
+    # The commands that get executed when a player is muted
+    mute:
+      - "none"
+    # The commands that get executed when a player is unmuted
+    unmute:
+      - "none"
+    # The commands that get executed when a player is tempmuted
+    tempmute:
+      - "none"
+    # The commands that get executed when a player is warned
+    warn:
+      - "none"
+    # The commands that get executed when a player is tempwarned
+    tempwarn:
+      - "none"
+    # The commands that get executed when a player is unwarned
+    unwarn:
+      - "none"
+    # The commands that get executed when a player is kicked
+    kick:
+      - "none"
+  # The commands that get executed when a punishment is public
+  public:
+    # The commands that get executed when a player is banned
+    ban:
+      - "none"
+    # The commands that get executed when a player is unbanned
+    unban:
+      - "none"
+    # The commands that get executed when a player is tempbanned
+    tempban:
+      - "none"
+    # The commands that get executed when a player is muted
+    mute:
+      - "none"
+    # The commands that get executed when a player is unmuted
+    unmute:
+      - "none"
+    # The commands that get executed when a player is tempmuted
+    tempmute:
+      - "none"
+    # The commands that get executed when a player is warned
+    warn:
+      - "none"
+    # The commands that get executed when a player is tempwarned
+    tempwarn:
+      - "none"
+    # The commands that get executed when a player is unwarn
+    unwarn:
+      - "none"
+    # The commands that get executed when a player is kicked
+    kick:
+      - "none"

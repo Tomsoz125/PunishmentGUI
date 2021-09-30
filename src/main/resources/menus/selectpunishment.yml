@@ -1,0 +1,292 @@
+#
+# SELECTPUNISHMENT GUI CONFIG FILE FOR PUNISHMENTGUI BY TOMSOZ
+# This is where you can configure and customise how PunishmentGUI works.
+# If you have any questions please check my github: https://github.com/Tomsoz125/PunishmentGUI
+# Thanks for using PunishmentGUI
+#
+
+# This is some configurable options about the GUI
+gui:
+  # This is the name of the GUI
+  name: "&aSelect the punishment type"
+  # This is the number of rows in the GUI. Max 6
+  rows: 6
+  # This is the item that goes in all blank slots. Please refer to the wiki for a list of materials
+  blank:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'GRAY_STAINED_GLASS_PANE'
+    # This is the name of the item
+    name: "&7"
+    # This is the lore of the item
+    lore:
+
+# These are the items that go in the GUI
+items:
+  # This is the name. It can be anything.
+  placeholderPerm:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'LIGHT_GRAY_STAINED_GLASS_PANE'
+    # This is the slot that the item goes in the GUI
+    slot: 2
+    # Because this is a placeholder this has to be 'PLACEHOLDER'
+    type: 'PLACEHOLDER'
+    # This is the name of the item
+    name: "&aPermanent"
+    # This is the lore of the item
+    lore:
+      - "&aHere is a list of permanent punishments."
+    permission: ''
+    permission_lore:
+      - "&aHere is a list of permanent punishments."
+  # This is the name. It can be anything.
+  placeholderTemp:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'LIGHT_GRAY_STAINED_GLASS_PANE'
+    # This is the slot that the item goes in the GUI
+    slot: 5
+    # Because this is a placeholder this has to be 'PLACEHOLDER'
+    type: 'PLACEHOLDER'
+    # This is the name of the item
+    name: "&aTemporary"
+    # This is the lore of the item
+    lore:
+      - "&aHere is a list of temporary punishments."
+    permission: ''
+    permission_lore:
+      - "&aHere is a list of temporary punishments."
+  placeholderRevoke:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'LIGHT_GRAY_STAINED_GLASS_PANE'
+    # This is the slot that the item goes in the GUI
+    slot: 8
+    # Because this is a placeholder this has to be 'PLACEHOLDER'
+    type: 'PLACEHOLDER'
+    # This is the name of the item
+    name: "&aRevoke"
+    # This is the lore of the item
+    lore:
+      - "&aHere is a list of punishments you can revoke."
+    permission: ''
+    permission_lore:
+      - "&aHere is a list of punishments you can revoke."
+      
+  # This is the name. It can be anything.
+  banItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'DIAMOND_AXE'
+    # This is the slot that the item goes in the GUI
+    slot: 11
+    # This is what the item does. Values: (BAN, TEMPBAN, UNBAN, UNWARN, TEMPWARN, WARN, KICK, MUTE, TEMPMUTE)
+    type: 'BAN'
+    # This is the name of the item
+    name: "&aBan"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to set the punishment to ban."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.type.ban'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this punishment."
+
+  # This is the name. It can be anything.
+  muteItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'DIAMOND_AXE'
+    # This is the slot that the item goes in the GUI
+    slot: 20
+    # This is what the item does. Values: (BAN, TEMPBAN, UNBAN, UNWARN, TEMPWARN, WARN, KICK, MUTE, TEMPMUTE)
+    type: 'MUTE'
+    # This is the name of the item
+    name: "&aMute"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to set the punishment to mute."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.type.mute'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this punishment."
+      
+  # This is the name. It can be anything.
+  kickItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'DIAMOND_AXE'
+    # This is the slot that the item goes in the GUI
+    slot: 29
+    # This is what the item does. Values: (BAN, TEMPBAN, UNBAN, UNWARN, TEMPWARN, WARN, KICK, MUTE, TEMPMUTE)
+    type: 'KICK'
+    # This is the name of the item
+    name: "&aKick"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to set the punishment to kick."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.type.kick'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this punishment."
+      
+  # This is the name. It can be anything.
+  warnItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'DIAMOND_AXE'
+    # This is the slot that the item goes in the GUI
+    slot: 38
+    # This is what the item does. Values: (BAN, TEMPBAN, UNBAN, UNWARN, TEMPWARN, WARN, KICK, MUTE, TEMPMUTE)
+    type: 'WARN'
+    # This is the name of the item
+    name: "&aWarn"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to set the punishment to warn."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.type.warn'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this punishment."
+
+  # This is the name. It can be anything.
+  tempbanItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'GOLDEN_AXE'
+    # This is the slot that the item goes in the GUI
+    slot: 14
+    # This is what the item does. Values: (BAN, TEMPBAN, UNBAN, UNWARN, TEMPWARN, WARN, KICK, MUTE, TEMPMUTE)
+    type: 'TEMPBAN'
+    # This is the name of the item
+    name: "&aTemp-Ban"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to set the punishment to temp-ban."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.type.tempban'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this punishment."
+  # This is the name. It can be anything.
+  tempmuteItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'GOLDEN_AXE'
+    # This is the slot that the item goes in the GUI
+    slot: 23
+    # This is what the item does. Values: (BAN, TEMPBAN, UNBAN, UNWARN, TEMPWARN, WARN, KICK, MUTE, TEMPMUTE)
+    type: 'TEMPMUTE'
+    # This is the name of the item
+    name: "&aTemp-Mute"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to set the punishment to temp-mute."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.type.tempmute'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this punishment."
+      
+  tempwarnItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'GOLDEN_AXE'
+    # This is the slot that the item goes in the GUI
+    slot: 32
+    # This is what the item does. Values: (BAN, TEMPBAN, UNBAN, UNWARN, TEMPWARN, WARN, KICK, MUTE, TEMPMUTE)
+    type: 'TEMPWARN'
+    # This is the name of the item
+    name: "&aTemp-Warn"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to set the punishment to temp-warn."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.type.tempwarn'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this punishment."
+      
+  placeholder1:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'IRON_BARS'
+    # This is the slot that the item goes in the GUI
+    slot: 41
+    # Because this is a placeholder this has to be 'PLACEHOLDER'
+    type: 'PLACEHOLDER'
+    # This is the name of the item
+    name: "&7"
+    # This is the lore of the item
+    lore:
+    # This is the permission for a user to use this punishment type
+    permission: ''
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+
+
+  # This is the name. It can be anything.
+  unbanItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'IRON_AXE'
+    # This is the slot that the item goes in the GUI
+    slot: 17
+    # This is what the item does. Values: (BAN, TEMPBAN, UNBAN, UNWARN, TEMPWARN, WARN, KICK, MUTE, TEMPMUTE)
+    type: 'UNBAN'
+    # This is the name of the item
+    name: "&aUnban"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to set the punishment to unban."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.type.unban'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this punishment."
+
+  # This is the name. It can be anything.
+  unmuteItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'IRON_AXE'
+    # This is the slot that the item goes in the GUI
+    slot: 26
+    # This is what the item does. Values: (BAN, TEMPBAN, UNBAN, UNWARN, TEMPWARN, WARN, KICK, MUTE, TEMPMUTE)
+    type: 'UNMUTE'
+    # This is the name of the item
+    name: "&aUnmute"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to set the punishment to unmute."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.type.unmute'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this punishment."
+
+  # This is the name. It can be anything.
+  unwarnItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'IRON_AXE'
+    # This is the slot that the item goes in the GUI
+    slot: 35
+    # This is what the item does. Values: (BAN, TEMPBAN, UNBAN, UNWARN, TEMPWARN, WARN, KICK, MUTE, TEMPMUTE)
+    type: 'UNWARN'
+    # This is the name of the item
+    name: "&aUnwarn"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to set the punishment to unwarn."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.type.unwarn'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this punishment."
+
+  placeholder2:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'IRON_BARS'
+    # This is the slot that the item goes in the GUI
+    slot: 44
+    # Because this is a placeholder this has to be 'PLACEHOLDER'
+    type: 'PLACEHOLDER'
+    # This is the name of the item
+    name: "&7"
+    # This is the lore of the item
+    lore:
+    # This is the permission for a user to use this punishment type
+    permission: ''
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:

@@ -1,0 +1,114 @@
+#
+# SELECTTIME GUI CONFIG FILE FOR PUNISHMENTGUI BY TOMSOZ
+# This is where you can configure and customise how PunishmentGUI works.
+# If you have any questions please check my github: https://github.com/Tomsoz125/PunishmentGUI
+# Thanks for using PunishmentGUI
+#
+
+# This is some configurable options about the GUI
+gui:
+  # This is the name of the GUI
+  name: "&aSelect the punishment time"
+  # This is the number of rows in the GUI. Max 6
+  rows: 3
+  # This is the item that goes in all blank slots. Please refer to the wiki for a list of materials
+  blank:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'GRAY_STAINED_GLASS_PANE'
+    # This is the name of the item
+    name: "&7"
+    # This is the lore of the item
+    lore:
+
+# These are the items that go in the GUI
+items:
+  # This is the name. It can be anything.
+  1moItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'RED_WOOL'
+    # This is the slot that the item goes in the GUI
+    slot: 11
+    # This is what the item stands for, use CUSTOM to set a custom time use PERM for permanent.
+    time: '1mo'
+    # This is the name of the item
+    name: "&a1 month"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to select the time 1 month."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.time.1mo'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this time."
+  # This is the name. It can be anything.
+  1wItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'GREEN_WOOL'
+    # This is the slot that the item goes in the GUI
+    slot: 13
+    # This is what the item stands for, use CUSTOM to set a custom time use PERM for permanent.
+    time: '1w'
+    # This is the name of the item
+    name: "&a1 week"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to select the time 1 week."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.time.1w'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this time."
+  # This is the name. It can be anything.
+  1dItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'BLUE_WOOL'
+    # This is the slot that the item goes in the GUI
+    slot: 15
+    # This is what the item stands for, use CUSTOM to set a custom time use PERM for permanent.
+    time: '1d'
+    # This is the name of the item
+    name: "&a1 day"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to select the time 1 day."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.time.1d'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this time."
+  # This is the name. It can be anything.
+  permItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'REDSTONE_BLOCK'
+    # This is the slot that the item goes in the GUI
+    slot: 17
+    # This is what the item stands for, use CUSTOM to set a custom time use PERM for permanent.
+    time: 'PERM'
+    # This is the name of the item
+    name: "&aForever"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to select the time Forever."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.time.forever'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this time."
+  # This is the name. It can be anything.
+  customItem:
+    # This is the item material. Please refer to the wiki for a list of materials
+    material: 'BOOK'
+    # This is the slot that the item goes in the GUI
+    slot: 23
+    # This is what the item stands for, use CUSTOM to set a custom time use PERM for permanent.
+    time: 'CUSTOM'
+    # This is the name of the item
+    name: "&aCustom time"
+    # This is the lore of the item
+    lore:
+      - "&aClick here to select a custom time."
+    # This is the permission for a user to use this punishment type
+    permission: 'punishmentgui.time.custom'
+    # This is the lore displayed if a user dosen't have permission to use the punishment
+    permission_lore:
+      - "&cYou don't have permission to use this time."
